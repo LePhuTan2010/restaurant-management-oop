@@ -21,7 +21,7 @@ public class Menu {
     public Menu(List<MenuItem> menuItems, BigDecimal totalPrice, Date timeStamp, Date payDate) {
         this.id = number++;
         this.menuItems = menuItems;
-        this.totalPrice = totalPrice;
+        this.totalPrice = getPrice();
         this.timeStamp = timeStamp;
         this.payDate = payDate;
     }
@@ -62,6 +62,14 @@ public class Menu {
 
     public void setMenuItems(List<MenuItem> menuItems) {
         this.menuItems = menuItems;
+    }
+
+    public BigDecimal getPrice(){
+        BigDecimal totalPrice = BigDecimal.ZERO;
+        for (MenuItem menuItem : menuItems) {
+            totalPrice = totalPrice.add(menuItem.getPrice());
+        }
+        return totalPrice;
     }
 
     @Override

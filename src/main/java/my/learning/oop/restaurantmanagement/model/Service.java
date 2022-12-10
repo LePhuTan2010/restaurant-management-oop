@@ -12,7 +12,7 @@ public class Service {
     private BigDecimal price;
     private ServiceType serviceType;
 
-    private ServicePerfomer servicePerfomer;
+    private ServicePerformer servicePerformer;
 
     public Service(){this.id = number++;}
 
@@ -64,12 +64,12 @@ public class Service {
         this.serviceType = serviceType;
     }
 
-    public ServicePerfomer getServicePerfomer() {
-        return servicePerfomer;
+    public ServicePerformer getServicePerfomer() {
+        return servicePerformer;
     }
 
-    public void setServicePerfomer(ServicePerfomer servicePerfomer) {
-        this.servicePerfomer = servicePerfomer;
+    public void setServicePerfomer(ServicePerformer servicePerformer) {
+        this.servicePerformer = servicePerformer;
     }
 
     @Override
@@ -77,12 +77,12 @@ public class Service {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Service service = (Service) o;
-        return Objects.equals(id, service.id) && Objects.equals(code, service.code) && Objects.equals(name, service.name) && Objects.equals(price, service.price) && Objects.equals(serviceType, service.serviceType) && Objects.equals(servicePerfomer, service.servicePerfomer);
+        return Objects.equals(id, service.id) && Objects.equals(code, service.code) && Objects.equals(name, service.name) && Objects.equals(price, service.price) && Objects.equals(serviceType, service.serviceType) && Objects.equals(servicePerformer, service.servicePerformer);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, code, name, price, serviceType, servicePerfomer);
+        return Objects.hash(id, code, name, price, serviceType, servicePerformer);
     }
 
     @Override
@@ -93,7 +93,7 @@ public class Service {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", serviceType=" + serviceType +
-                ", servicePerfomer=" + servicePerfomer +
+                ", servicePerfomer=" + servicePerformer +
                 '}';
     }
 }

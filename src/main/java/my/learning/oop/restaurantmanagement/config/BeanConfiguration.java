@@ -31,7 +31,7 @@ public class BeanConfiguration {
     public List<Service> serviceList() { return new ArrayList<>(); }
 
     @Bean
-    public List<ServicePerfomer> servicePerfomerList() { return new ArrayList<>(); }
+    public List<ServicePerformer> servicePerfomerList() { return new ArrayList<>(); }
 
     @Bean
     public List<ServiceType> serviceTypeList() { return new ArrayList<>(); }

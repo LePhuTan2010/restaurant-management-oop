@@ -1,14 +1,14 @@
 package my.learning.oop.restaurantmanagement.model;
 
 import java.util.Objects;
-public class ServicePerfomer {
+public class ServicePerformer {
     private static Long number = 0L;
     private Long id;
     private String name;
 
-    public ServicePerfomer(){this.id = number++;}
+    public ServicePerformer(){this.id = number++;}
 
-    public ServicePerfomer(String name) {
+    public ServicePerformer(String name) {
         this.id = number++;
         this.name = name;
     }
@@ -33,7 +33,7 @@ public class ServicePerfomer {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ServicePerfomer that = (ServicePerfomer) o;
+        ServicePerformer that = (ServicePerformer) o;
         return Objects.equals(id, that.id) && Objects.equals(name, that.name);
     }
 

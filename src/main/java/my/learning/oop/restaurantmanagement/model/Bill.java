@@ -1,13 +1,12 @@
 package my.learning.oop.restaurantmanagement.model;
 
-
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
 public class Bill {
-
     private static Long number = 0L;
     private Long id;
 
@@ -23,18 +22,22 @@ public class Bill {
 
     private Date organizationDate;
 
+    private Integer numberOfTables;
+
     public Bill(){
         this.id = number++;
     }
 
-    public Bill(String partyName, Hall hall, Menu menu, List<Service> services, Date bookingDate, Date organizationDate) {
+    public Bill(String partyName, Hall hall, Menu menu, List<Service> services, Date organizationDate,
+                Integer numberOfTables) {
         this.id = number++;
         this.partyName = partyName;
         this.hall = hall;
         this.menu = menu;
         this.services = services;
-        this.bookingDate = bookingDate;
+        this.bookingDate = new Date();
         this.organizationDate = organizationDate;
+        this.numberOfTables = numberOfTables;
     }
 
     public List<Service> getServices() {
@@ -89,6 +92,23 @@ public class Bill {
 
     public void setOrganizationDate(Date organizationDate) {
         this.organizationDate = organizationDate;
+    }
+
+    public Integer getNumberOfTables() {
+        return numberOfTables;
+    }
+
+    public void setNumberOfTables(Integer numberOfTables) {
+        this.numberOfTables = numberOfTables;
+    }
+
+    public BigDecimal getSum(){
+        BigDecimal sum = BigDecimal.ZERO;
+        for (Service service : services) {
+            sum = sum.add(service.getPrice());
+        }
+        sum.add(menu.getTotalPrice());
+        return sum;
     }
 
     @Override

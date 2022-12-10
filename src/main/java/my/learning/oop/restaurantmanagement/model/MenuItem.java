@@ -19,7 +19,7 @@ public class MenuItem {
         this.id = number++;
         this.product = product;
         this.quantity = quantity;
-        this.price = price;
+        this.price = BigDecimal.ZERO;
     }
 
     public Long getId() {
