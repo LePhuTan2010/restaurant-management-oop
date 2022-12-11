@@ -2,6 +2,7 @@ package my.learning.oop.restaurantmanagement.service;
 
 import my.learning.oop.restaurantmanagement.model.Menu;
 import my.learning.oop.restaurantmanagement.model.MenuItem;
+import my.learning.oop.restaurantmanagement.model.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,15 +26,15 @@ public class MenuService {
         menuList.add(menu);
     }
 
-    public void removeMenu(Menu menu) {
-        menuList.remove(menu);
+    public void removeMenuById(Long id) {
+        menuList.removeIf(menu -> menu.getId().equals(id));
     }
 
     public void updateMenu(Menu menu) {
         menuList.set(menuList.indexOf(menu), menu);
     }
 
-    public Menu getMenuById(int id) {
+    public Menu getMenuById(Long id) {
         return menuList.stream().filter(menu -> menu.getId() == id).findFirst().orElse(null);
     }
 
@@ -42,6 +43,8 @@ public class MenuService {
         menu.getMenuItems().add(menuItem);
     }
 
-
+    public List<Product> getProductsByMenuId(Long menuId) {
+        return getMenuById(menuId).getMenuItems().stream().map(MenuItem::getProduct).toList();
+    }
 
 }

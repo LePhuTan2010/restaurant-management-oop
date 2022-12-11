@@ -20,6 +20,10 @@ public class WeddingServiceService {
         return serviceList;
     }
 
+    public Service getServiceById(Long id){
+        return serviceList.stream().filter(service -> Objects.equals(service.getId(), id)).findFirst().orElse(null);
+    }
+
     public void addService(Service service) {
         serviceList.add(service);
     }

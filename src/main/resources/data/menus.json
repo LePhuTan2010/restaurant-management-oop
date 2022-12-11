@@ -1,1 +1,90 @@
-[]
+[
+  {
+    "id": 1,
+    "menuItems": [
+      {
+        "id": 1,
+        "product": {
+          "id": 1,
+          "code": "P001",
+          "name": "Súp Bào Ngư",
+          "price": 220,
+          "productType": {
+            "id": "1",
+            "name": "Starter"
+          }
+        },
+        "quantity": 10,
+        "price": 2200.0
+      },
+      {
+        "id": 2,
+        "product": {
+          "id": 2,
+          "code": "P002",
+          "name": "Cháo đậu xanh và gỏi gà",
+          "price": 180,
+          "productType": {
+            "id": "2",
+            "name": "Main Course"
+          }
+        },
+        "quantity": 10,
+        "price": 1800.0
+      },
+      {
+        "id": 3,
+        "product": {
+          "id": 3,
+          "code": "P003",
+          "name": "Lẩu cá diêu hồng",
+          "price": 200,
+          "productType": {
+            "id": "2",
+            "name": "Main Course"
+          }
+        },
+        "quantity": 10,
+        "price": 2000.0
+      },
+      {
+        "id": 4,
+        "product": {
+          "id": 4,
+          "code": "P004",
+          "name": "Rau câu",
+          "price": 100,
+          "vegan": true,
+          "productType": {
+            "id": "3",
+            "name": "Dessert"
+          }
+        },
+        "quantity": 10,
+        "price": 1000.0
+      },
+      {
+        "id": 5,
+        "product": {
+          "id": 5,
+          "code": "P005",
+          "name": "Coca cola",
+          "price": 200,
+          "productType": {
+            "id": "4",
+            "name": "Drink"
+          },
+          "manufacturer": {
+            "id": "1",
+            "name": "Coca Cola"
+          }
+        },
+        "quantity": 10,
+        "price": 2000.0
+      }
+    ],
+    "totalPrice": 9000.0,
+    "timeStamp": "2020-04-20T20:00:00.000+00:00",
+    "payDate": "2020-04-20T20:00:00.000+00:00"
+  }
+]

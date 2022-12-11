@@ -8,9 +8,9 @@ public class Food extends Product{
 
     public Food(){}
 
-    public Food(Boolean isVegan) {
-        this.isVegan = isVegan;
-    }
+//    public Food(Boolean isVegan) {
+//        this.isVegan = isVegan;
+//    }
 
     public Food(String code, String name, BigDecimal price, ProductType type, Boolean isVegan) {
         super(code, name, price, type);

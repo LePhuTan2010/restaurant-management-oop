@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Karaoke"
+  },
+  {
+    "id": 2,
+    "name": "Dancing"
+  },
+  {
+    "id": 3,
+    "name": "Drinking"
+  },
+  {
+    "id": 4,
+    "name": "Singer"
+  },
+  {
+    "id": 5,
+    "name": "Live Music"
+  },
+  {
+    "id": 6,
+    "name": "Sports"
+  },
+  {
+    "id": 7,
+    "name": "Vendor"
+  }
+]

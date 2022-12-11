@@ -26,6 +26,14 @@ public class Menu {
         this.payDate = payDate;
     }
 
+    public static Long getNumber() {
+        return number;
+    }
+
+    public static void setNumber(Long number) {
+        Menu.number = number;
+    }
+
     public Long getId() {
         return id;
     }

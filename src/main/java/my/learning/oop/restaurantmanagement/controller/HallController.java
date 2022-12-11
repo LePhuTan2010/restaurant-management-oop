@@ -4,6 +4,7 @@ import my.learning.oop.restaurantmanagement.model.Hall;
 import my.learning.oop.restaurantmanagement.service.DataService;
 import my.learning.oop.restaurantmanagement.service.HallService;
 import my.learning.oop.restaurantmanagement.util.FileLocation;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -28,6 +29,12 @@ public class HallController {
         return hallService.getHallList();
     }
 
+    @GetMapping("/halls/{id}")
+    @ResponseBody
+    public ResponseEntity<Hall> getHallById(@PathVariable String id) {
+        return ResponseEntity.ok(hallService.getHallById(id));
+    }
+
     @PostMapping("/halls")
     @ResponseBody
     public void addHall(@RequestBody Hall hall) throws IOException, URISyntaxException {
@@ -42,9 +49,9 @@ public class HallController {
         dataService.writeToFile(FileLocation.HALL);
     }
 
-    @DeleteMapping("/halls/{id}")
+    @DeleteMapping("/halls")
     @ResponseBody
-    public void deleteHall(@PathVariable String id) throws IOException, URISyntaxException {
+    public void deleteHall(@RequestParam("id") String id) throws IOException, URISyntaxException {
         hallService.removeHallById(id);
         dataService.writeToFile(FileLocation.HALL);
     }

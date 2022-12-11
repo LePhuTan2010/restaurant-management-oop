@@ -22,6 +22,14 @@ public class MenuItem {
         this.price = BigDecimal.ZERO;
     }
 
+    public static Long getNumber() {
+        return number;
+    }
+
+    public static void setNumber(Long number) {
+        MenuItem.number = number;
+    }
+
     public Long getId() {
         return id;
     }

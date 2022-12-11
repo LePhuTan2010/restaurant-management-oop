@@ -1,8 +1,19 @@
 package my.learning.oop.restaurantmanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import java.math.BigDecimal;
+import java.util.Map;
 import java.util.Objects;
 
+@JsonTypeInfo(use= JsonTypeInfo.Id.DEDUCTION, defaultImpl = Product.class)
+@JsonSubTypes({
+        @JsonSubTypes.Type(Food.class),
+        @JsonSubTypes.Type(Drink.class),
+        @JsonSubTypes.Type(MenuItem.class)
+})
 public class Product {
 
     private static Long number = 0L;
@@ -21,6 +32,14 @@ public class Product {
         this.name = name;
         this.price = price;
         this.productType = productType;
+    }
+
+    public static Long getNumber() {
+        return number;
+    }
+
+    public static void setNumber(Long number) {
+        Product.number = number;
     }
 
     public Long getId() {

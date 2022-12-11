@@ -1,1 +1,45 @@
-[]
+[
+  {
+    "id": 1,
+    "code": "S001",
+    "name": "Service 1",
+    "price": 100,
+    "serviceType": {
+      "id": 1,
+      "name": "Karaoke"
+    },
+    "servicePerformer": {
+      "id": 1,
+      "name": "John Doe"
+    }
+  },
+  {
+    "id": 2,
+    "code": "S002",
+    "name": "Service 2",
+    "price": 200,
+    "serviceType": {
+      "id": 2,
+      "name": "DJ"
+    },
+    "servicePerformer": {
+      "id": 2,
+      "name": "Jane Doe"
+    }
+  },
+  {
+    "id": 3,
+    "code": "S003",
+    "name": "Service 3",
+    "price": 300,
+    "serviceType": {
+      "id": 1,
+      "name": "Karaoke"
+    },
+    "servicePerformer": {
+      "id": 7,
+      "name": "Vendor"
+    },
+    "rentTime": 5
+  }
+]

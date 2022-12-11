@@ -7,9 +7,11 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @SpringBootApplication
 @Slf4j
+@EntityScan(basePackages = {"my.learning.oop.restaurantmanagement.model"})
 public class RestaurantManagementApplication implements ApplicationRunner {
 
 	@Autowired

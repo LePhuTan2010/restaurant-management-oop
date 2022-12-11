@@ -13,6 +13,14 @@ public class ServicePerformer {
         this.name = name;
     }
 
+    public static Long getNumber() {
+        return number;
+    }
+
+    public static void setNumber(Long number) {
+        ServicePerformer.number = number;
+    }
+
     public Long getId() {
         return id;
     }

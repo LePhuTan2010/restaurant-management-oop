@@ -4,6 +4,7 @@ import my.learning.oop.restaurantmanagement.model.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class ProductService {
@@ -23,6 +24,10 @@ public class ProductService {
 
     public void removeProduct(Product product) {
         productList.remove(product);
+    }
+
+    public void removeProductById(Long id) {
+        productList.removeIf(product -> Objects.equals(product.getId(), id));
     }
 
     public void updateProduct(Product product) {

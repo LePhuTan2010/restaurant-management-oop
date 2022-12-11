@@ -1,7 +1,8 @@
 package my.learning.oop.restaurantmanagement.service;
 
 import my.learning.oop.restaurantmanagement.model.Bill;
-import my.learning.oop.restaurantmanagement.model.HallPrice;
+import my.learning.oop.restaurantmanagement.model.Hall;
+import my.learning.oop.restaurantmanagement.model.HallStatus;
 import my.learning.oop.restaurantmanagement.util.QuarterUtil;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +16,13 @@ public class BillService {
 
     private final List<Bill> billList;
 
+    private final List<Hall> hallList;
+
     private final HallPriceService hallPriceService;
 
-    public BillService(List<Bill> billList, HallPriceService hallPriceService) {
+    public BillService(List<Bill> billList, List<Hall> hallList, HallPriceService hallPriceService) {
         this.billList = billList;
+        this.hallList = hallList;
         this.hallPriceService = hallPriceService;
     }
 
@@ -27,6 +31,14 @@ public class BillService {
     }
 
     public void addBill(Bill bill) {
+        hallList.stream().filter(hall -> hall.getId().equals(bill.getHall().getId())).findFirst().ifPresent(hall -> {
+            if(hall.getStatus().equals(HallStatus.AVAILABLE)){
+                hall.setStatus(HallStatus.RESERVED);
+            }else{
+                throw new RuntimeException("Hall is not available");
+            }
+        });
+
         billList.add(bill);
     }
 

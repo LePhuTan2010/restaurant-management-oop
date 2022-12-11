@@ -1,8 +1,15 @@
 package my.learning.oop.restaurantmanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import java.math.BigDecimal;
 import java.util.Objects;
 
+@JsonTypeInfo(use= JsonTypeInfo.Id.DEDUCTION, defaultImpl = Service.class)
+@JsonSubTypes({
+        @JsonSubTypes.Type(Karaoke.class),
+})
 public class Service {
 
     private static Long number = 0L;
@@ -22,6 +29,22 @@ public class Service {
         this.name = name;
         this.price = price;
         this.serviceType = serviceType;
+    }
+
+    public static Long getNumber() {
+        return number;
+    }
+
+    public static void setNumber(Long number) {
+        Service.number = number;
+    }
+
+    public ServicePerformer getServicePerformer() {
+        return servicePerformer;
+    }
+
+    public void setServicePerformer(ServicePerformer servicePerformer) {
+        this.servicePerformer = servicePerformer;
     }
 
     public Long getId() {

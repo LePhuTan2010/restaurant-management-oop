@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Hall {
 
     private static final String PREFIX = "S";
-    private static int number = 0;
+    private static Long number = 0L;
 
     private String id;
     private String code;
@@ -25,6 +25,14 @@ public class Hall {
         this.location = location;
         this.capacity = capacity;
         this.status = status;
+    }
+
+    public static Long getNumber() {
+        return number;
+    }
+
+    public static void setNumber(Long number) {
+        Hall.number = number;
     }
 
     public String getId() {
@@ -80,6 +88,14 @@ public class Hall {
         Hall hall = (Hall) o;
         return Objects.equals(id, hall.id) && Objects.equals(code, hall.code) && Objects.equals(name, hall.name) && Objects.equals(location, hall.location) && Objects.equals(capacity, hall.capacity) && status == hall.status;
     }
+
+    /*
+        Object 1  | Object 2
+        Object 1 == Object 2 ? -> Sử dụng method equals
+        Object1.equals(Object2)
+        Object 1 == Object 2 ? hashcode 1 == hashcode 2
+        hashcode1 == hashcode 2 -> Object 1 != Object 2 || Object 1 == Object 2
+     */
 
     @Override
     public int hashCode() {

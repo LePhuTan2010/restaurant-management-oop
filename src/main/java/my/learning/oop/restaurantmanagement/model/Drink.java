@@ -6,11 +6,11 @@ import java.util.Objects;
 public class Drink extends Product{
     private Manufacturer manufacturer;
 
-    public Drink(){}
-
-    public Drink(Manufacturer manufacturer) {
-        this.manufacturer = manufacturer;
-    }
+//    public Drink(){}
+//
+//    public Drink(Manufacturer manufacturer) {
+//        this.manufacturer = manufacturer;
+//    }
 
     public Drink(String code, String name, BigDecimal price, ProductType productType, Manufacturer manufacturer) {
         super(code, name, price, productType);

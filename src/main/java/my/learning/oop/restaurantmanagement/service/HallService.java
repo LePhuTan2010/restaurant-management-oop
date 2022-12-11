@@ -3,17 +3,8 @@ package my.learning.oop.restaurantmanagement.service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import my.learning.oop.restaurantmanagement.model.*;
-import my.learning.oop.restaurantmanagement.util.FileLocation;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.util.List;
 
 @Service
@@ -30,8 +21,21 @@ public class HallService {
         return hallList;
     }
 
+    public Hall getHallById(String id){
+        return hallList.stream()
+                .filter(hall -> hall.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
+
     public void addHall(Hall hall){
-        hallList.add(hall);
+        Hall newHall = new Hall();
+        newHall.setName(hall.getName());
+        newHall.setCapacity(hall.getCapacity());
+        newHall.setStatus(hall.getStatus());
+        newHall.setCode(hall.getCode());
+        newHall.setLocation(hall.getLocation());
+        hallList.add(newHall);
     }
 
     public void removeHall(Hall hall){

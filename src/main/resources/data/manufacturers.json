@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": "1",
+    "name": "Coca Cola"
+  },
+  {
+      "id": "2",
+      "name": "Pepsico"
+  },
+  {
+      "id": "3",
+      "name": "Trương Dương"
+  },
+  {
+      "id": "4",
+      "name": "Vinamilk"
+  }
+]

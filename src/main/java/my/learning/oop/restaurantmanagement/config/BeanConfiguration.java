@@ -10,6 +10,7 @@ import java.util.List;
 
 @Configuration
 public class BeanConfiguration {
+
     @Bean
     public ModelMapper modelMapper(){
         return new ModelMapper();

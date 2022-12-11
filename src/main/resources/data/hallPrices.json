@@ -1,1 +1,125 @@
-[]
+[
+  {
+    "id": 1,
+    "fromDate": "2019-01-01",
+    "toDate": "2019-01-02",
+    "price": 100,
+    "hall": {
+      "id": "S0",
+      "code": "S0",
+      "name": "Heaven",
+      "location": "1st Floor, 371 Nguyen Kiem Street",
+      "capacity": 100
+    }
+  },
+  {
+    "id": 2,
+    "fromDate": "2019-01-01",
+    "toDate": "2019-01-02",
+    "price": 100,
+    "hall": {
+      "id": "S0",
+      "code": "S0",
+      "name": "Heaven",
+      "location": "1st Floor, 371 Nguyen Kiem Street",
+      "capacity": 100
+    }
+  },
+  {
+    "id": 3,
+    "fromDate": "2019-01-01",
+    "toDate": "2019-01-02",
+    "price": 100,
+    "hall": {
+      "id": "S0",
+      "code": "S0",
+      "name": "Heaven",
+      "location": "1st Floor, 371 Nguyen Kiem Street",
+      "capacity": 100
+    }
+  },
+  {
+    "id": 4,
+    "fromDate": "2019-01-01",
+    "toDate": "2019-01-02",
+    "price": 100,
+    "hall": {
+      "id": "S1",
+      "code": "S1",
+      "name": "Deep Sea",
+      "location": "2nd Floor, 371 Nguyen Kiem Street",
+      "capacity": 70,
+      "status": 1
+    }
+  },
+  {
+    "id": 5,
+    "fromDate": "2019-01-01",
+    "toDate": "2019-01-02",
+    "price": 100,
+    "hall": {
+      "id": "S1",
+      "code": "S1",
+      "name": "Deep Sea",
+      "location": "2nd Floor, 371 Nguyen Kiem Street",
+      "capacity": 70,
+      "status": 1
+    }
+  },
+  {
+    "id": 6,
+    "fromDate": "2019-01-01",
+    "toDate": "2019-01-02",
+    "price": 100,
+    "hall": {
+      "id": "S1",
+      "code": "S1",
+      "name": "Deep Sea",
+      "location": "2nd Floor, 371 Nguyen Kiem Street",
+      "capacity": 70,
+      "status": 1
+    }
+  },
+  {
+    "id": 7,
+    "fromDate": "2019-01-01",
+    "toDate": "2019-01-02",
+    "price": 100,
+    "hall": {
+      "id": "S2",
+      "code": "S2",
+      "name": "Dream Catcher",
+      "location": "3rd Floor, 371 Nguyen Kiem Street",
+      "capacity": 50,
+      "status": 0
+    }
+  },
+  {
+    "id": 8,
+    "fromDate": "2019-01-01",
+    "toDate": "2019-01-02",
+    "price": 100,
+    "hall": {
+      "id": "S2",
+      "code": "S2",
+      "name": "Dream Catcher",
+      "location": "3rd Floor, 371 Nguyen Kiem Street",
+      "capacity": 50,
+      "status": 0
+    }
+  },
+  {
+    "id": 9,
+    "fromDate": "2019-01-01",
+    "toDate": "2019-01-02",
+    "price": 100,
+    "hall": {
+      "id": "S2",
+      "code": "S2",
+      "name": "Dream Catcher",
+      "location": "3rd Floor, 371 Nguyen Kiem Street",
+      "capacity": 50,
+      "status": 0
+    }
+  }
+]

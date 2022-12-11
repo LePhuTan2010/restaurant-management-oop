@@ -17,6 +17,14 @@ public class ProductType {
         this.name = name;
     }
 
+    public static Long getNumber() {
+        return number;
+    }
+
+    public static void setNumber(Long number) {
+        ProductType.number = number;
+    }
+
     public Long getId() {
         return id;
     }

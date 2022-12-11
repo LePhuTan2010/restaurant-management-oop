@@ -1,1 +1,57 @@
-[]
+[
+  {
+    "id": 1,
+    "code": "P001",
+    "name": "Súp Bào Ngư",
+    "price": 220,
+    "productType": {
+      "id": "1",
+      "name": "Starter"
+    }
+  },
+  {
+    "id": 2,
+    "code": "P002",
+    "name": "Cháo đậu xanh và gỏi gà",
+    "price": 180,
+    "productType": {
+      "id": "2",
+      "name": "Main Course"
+    }
+  },
+  {
+    "id": 3,
+    "code": "P003",
+    "name": "Lẩu cá diêu hồng",
+    "price": 200,
+    "productType": {
+      "id": "2",
+      "name": "Main Course"
+    }
+  },
+  {
+    "id": 4,
+    "code": "P004",
+    "name": "Rau câu",
+    "price": 100,
+    "vegan": true,
+    "productType": {
+      "id": "3",
+      "name": "Dessert"
+    }
+  },
+  {
+    "id": 5,
+    "code": "P005",
+    "name": "Coca cola",
+    "price": 200,
+    "productType": {
+      "id": "4",
+      "name": "Drink"
+    },
+    "manufacturer": {
+      "id": "1",
+      "name": "Coca Cola"
+    }
+  }
+]

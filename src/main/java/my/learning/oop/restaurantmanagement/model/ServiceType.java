@@ -14,6 +14,14 @@ public class ServiceType {
         this.name = name;
     }
 
+    public static Long getNumber() {
+        return number;
+    }
+
+    public static void setNumber(Long number) {
+        ServiceType.number = number;
+    }
+
     public Long getId() {
         return id;
     }

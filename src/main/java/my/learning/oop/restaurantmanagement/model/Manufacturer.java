@@ -14,6 +14,14 @@ public class Manufacturer {
         this.name = name;
     }
 
+    public static Long getNumber() {
+        return number;
+    }
+
+    public static void setNumber(Long number) {
+        Manufacturer.number = number;
+    }
+
     public Long getId() {
         return id;
     }

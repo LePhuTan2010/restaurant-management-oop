@@ -27,6 +27,14 @@ public class HallPrice {
         this.hall = hall;
     }
 
+    public static Long getNumber() {
+        return number;
+    }
+
+    public static void setNumber(Long number) {
+        HallPrice.number = number;
+    }
+
     public Long getId() {
         return id;
     }

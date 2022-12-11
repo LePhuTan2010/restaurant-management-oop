@@ -24,6 +24,8 @@ public class Bill {
 
     private Integer numberOfTables;
 
+    private BigDecimal price;
+
     public Bill(){
         this.id = number++;
     }
@@ -38,6 +40,23 @@ public class Bill {
         this.bookingDate = new Date();
         this.organizationDate = organizationDate;
         this.numberOfTables = numberOfTables;
+        this.price = getSum();
+    }
+
+    public static Long getNumber() {
+        return number;
+    }
+
+    public static void setNumber(Long number) {
+        Bill.number = number;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
     public List<Service> getServices() {
