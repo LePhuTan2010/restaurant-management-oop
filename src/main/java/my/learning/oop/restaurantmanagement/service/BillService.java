@@ -38,7 +38,10 @@ public class BillService {
                 throw new RuntimeException("Hall is not available");
             }
         });
-
+        
+        if(bill.getHall().getStatus().equals(HallStatus.RESERVED)){
+            throw new RuntimeException("Hall is not available");
+        }
         billList.add(bill);
     }
 

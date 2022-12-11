@@ -3,7 +3,7 @@
     "id": 1,
     "code": "S001",
     "name": "Service 1",
-    "price": 100,
+    "price": "100",
     "serviceType": {
       "id": 1,
       "name": "Karaoke"
@@ -17,7 +17,7 @@
     "id": 2,
     "code": "S002",
     "name": "Service 2",
-    "price": 200,
+    "price": "200",
     "serviceType": {
       "id": 2,
       "name": "DJ"
@@ -31,7 +31,7 @@
     "id": 3,
     "code": "S003",
     "name": "Service 3",
-    "price": 300,
+    "price": "300",
     "serviceType": {
       "id": 1,
       "name": "Karaoke"

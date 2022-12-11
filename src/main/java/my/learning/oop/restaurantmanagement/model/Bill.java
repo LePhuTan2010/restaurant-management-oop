@@ -1,5 +1,6 @@
 package my.learning.oop.restaurantmanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,6 +25,7 @@ public class Bill {
 
     private Integer numberOfTables;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private BigDecimal price;
 
     public Bill(){
@@ -123,10 +125,17 @@ public class Bill {
 
     public BigDecimal getSum(){
         BigDecimal sum = BigDecimal.ZERO;
-        for (Service service : services) {
-            sum = sum.add(service.getPrice());
+        if(services.isEmpty()){
+            return sum;
         }
-        sum.add(menu.getTotalPrice());
+        for (Service service : services) {
+            if(null != service && null != service.getPrice()){
+                sum = sum.add(service.getPrice());
+            }
+        }
+        if(null != menu && null != menu.getTotalPrice()){
+            sum.add(menu.getTotalPrice());
+        }
         return sum;
     }
 
