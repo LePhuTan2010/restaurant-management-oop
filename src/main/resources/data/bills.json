@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": 1,
+    "partyName": "Party1",
+    "hall": {
+      "id": 1,
+      "name": "Hall1",
+      "capacity": 100,
+      "price": 1000
+    },
+    "menu": {
+      "id": 1,
+      "name": "Menu1",
+      "price": 1000
+    },
+    "services": [
+      {
+        "id": 1,
+        "name": "Service1",
+        "price": 1000
+      },
+      {
+        "id": 2,
+        "name": "Service2",
+        "price": 2000
+      }
+    ],
+    "bookingDate": "2019-12-12",
+    "organizationDate": "2019-12-12",
+    "price": 5000
+  }
+]
