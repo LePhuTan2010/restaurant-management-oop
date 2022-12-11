@@ -15,11 +15,11 @@ public class Hall {
     private HallStatus status;
 
     public Hall(){
-        this.id = String.format("%s%d",PREFIX,number++);
+        this.id = String.format("%s%03d",PREFIX,number++);
     }
 
     public Hall(String code, String name, String location, Integer capacity, HallStatus status) {
-        this.id = String.format("%s%d",PREFIX,number++);
+        this.id = String.format("%s%03d",PREFIX,number++);
         this.code = code;
         this.name = name;
         this.location = location;
